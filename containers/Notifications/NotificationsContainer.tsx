@@ -12,7 +12,7 @@ export const NotificationsContainer = ({ notifications }: NotificationsContainer
   }
 
   return (
-    <div className="fixed top-4 right-4 w-96 space-y-4">
+    <div className="fixed top-4 right-4 w-96 space-y-4" data-testid="notifications-container">
       {notifications.map((notification) => {
         return (
           <Notification

@@ -51,7 +51,7 @@ export const Notification = ({ type, text, title, id }: NotificationType) => {
   if(!visible) return null;
 
   return (
-    <div className={`relative ${active ? "right-0" : "-right-96"} transition-all`}>
+    <div className={`relative ${active ? "right-0" : "-right-96"} transition-all`} data-testid="notification">
       <div className={`flex rounded-lg h-24 ${backgroundColor} text-gray-900 shadow-xl border-l-8 ${borderColor}`}>
         <div className="flex flex-row gap-5 justify-center items-center px-5">
           <div className="my-auto">
