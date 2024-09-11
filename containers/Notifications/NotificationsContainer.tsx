@@ -6,8 +6,13 @@ interface NotificationsContainerProps {
 }
 
 export const NotificationsContainer = ({ notifications }: NotificationsContainerProps) => {
+
+  if(notifications.length === 0) {
+    return null;
+  }
+
   return (
-    <div className="fixed top-0 right-0 w-96 space-y-4 p-4">
+    <div className="fixed top-4 right-4 w-96 space-y-4" data-testid="notifications-container">
       {notifications.map((notification) => {
         return (
           <Notification
