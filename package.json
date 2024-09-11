@@ -42,7 +42,8 @@
   "repository": "git@github.com:woutersmedia/booker.git",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier --write ."
+      "pre-commit": "yarn prettier --write .",
+      "pre-push": "yarn lint && yarn test"
     }
   }
 }

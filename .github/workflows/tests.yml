@@ -18,7 +18,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # This is apparently the LTS version of Node.js in actions/setup-node@v3
+          node-version: "18"
 
       - name: Cache node modules
         uses: actions/cache@v2
