@@ -1,0 +1,33 @@
+name: "Tests"
+
+run-name: It runs a the tests on the codebase by @${{ github.actor }}
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "hotfix/*"
+
+jobs:
+  jest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Run Jest tests
+        run: yarn jest --coverage

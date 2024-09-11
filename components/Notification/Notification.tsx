@@ -46,7 +46,7 @@ export const Notification = ({ type, text, title, id }: NotificationType) => {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [title, text, type, removeNotification]);
+  }, [title, text, type, id, removeNotification]);
 
   if(!visible) return null;
 
