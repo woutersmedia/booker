@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rbc-calendar {
+    .rbc-toolbar {
+        @apply mb-2 flex flex-row py-2 gap-2 items-center justify-between;
+
+        .rbc-toolbar-label {
+            @apply font-semibold;
+        }
+    }
+
+    .rbc-btn-group {
+        @apply flex flex-row gap-2;
+
+        &:first-child, &:last-child {
+            @apply p-1 rounded-lg bg-gray-100 gap-2;
+
+            button {
+                @apply rounded-lg py-2 px-4 hover:bg-white;
+
+                &.rbc-active {
+                    @apply bg-white;
+                }
+            }
+        }
+
+        &:first-child {
+            @apply bg-transparent;
+
+            button {
+                @apply bg-gray-50 hover:bg-primary hover:text-white;
+
+                &.rbc-active {
+                    @apply bg-primary text-white;
+                }
+            }
+        }
+    }
+
+    .rbc-month-view {
+        @apply border border-gray-100;
+
+        .rbc-month-header {
+            @apply grid grid-cols-7;
+        }
+    }
+
+    .rbc-month-row {
+        @apply relative;
+
+        .rbc-row-content .rbc-row {
+            @apply flex first:grid first:grid-cols-7;
+
+            .rbc-row-segment {
+                @apply grid col-auto max-w-full;
+            }
+        }
+    }
+
+    .rbc-row-content {
+        @apply border-t border-gray-100;
+
+        .rbc-row {
+            @apply divide-x divide-gray-100;
+        }
+    }
+
+    .rbc-date-cell {
+        @apply p-1 h-full;
+    }
+
+    .rbc-off-range {
+        @apply bg-gray-100;
+    }
+
+    .rbc-event {
+        @apply bg-primary rounded text-sm mb-1 text-white min-w-full;
+
+        &.rbc-event-allday {
+          @apply bg-green-500;
+        }
+
+        .rbc-event-label {
+            @apply text-sm p-1;
+        }
+    }
+
+    .rbc-row-bg {
+        @apply absolute inset-0 grid grid-cols-7 h-full divide-x divide-gray-100 -z-10;
+
+        .rbc-day-bg {
+            &:nth-of-type(even) {
+                @apply divide-x divide-gray-100;
+            }
+
+            &.rbc-today {
+                @apply bg-green-200;
+            }
+        }
+    }
+
+    .rbc-time-view {
+        @apply border border-gray-100 bg-white;
+
+        .rbc-time-header {
+            @apply grid grid-cols-8 gap-2;
+
+            .rbc-time-header-gutter {
+                @apply col-start-1 col-end-2;
+            }
+
+            .rbc-time-header-content {
+                @apply col-start-2 col-end-9;
+
+                .rbc-time-header-cell {
+                    @apply grid grid-cols-7;
+                }
+            }
+        }
+
+        .rbc-day-slot {
+            @apply flex;
+        }
+
+        .rbc-time-content {
+            @apply grid grid-cols-8 divide-x divide-gray-100;
+
+            .rbc-timeslot-group {
+                @apply border-b border-gray-100;
+            }
+
+            .rbc-timeslot-group, .rbc-events-container {
+                @apply px-2;
+            }
+        }
+    }
+}

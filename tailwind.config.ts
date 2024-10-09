@@ -17,6 +17,9 @@ const config: Config = {
         foreground: "var(--foreground)",
         primary: colors.blue[900],
       },
+      gridTemplateRows: {
+        24: "repeat(24, minmax(0, 1fr))"
+      },
       container: {
         center: true
       }
