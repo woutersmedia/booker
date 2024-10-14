@@ -26,6 +26,8 @@ export const Calendar = ({ events }: { events: CalenderItemEvents }) => {
     setView(newView);
   };
 
+  console.log(formats);
+
   return (
     <BigCalendar
       localizer={localizer}

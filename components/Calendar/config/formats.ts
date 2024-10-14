@@ -1,10 +1,14 @@
-import { DateLocalizer } from 'react-big-calendar';
+import { Formats, DateFormatFunction, DateRangeFormatFunction } from "react-big-calendar";
 
-export const formats = {
+export const formats: Formats = {
   dateFormat: "dd",
   timeGutterFormat: "HH:mm",
-  eventTimeRangeFormat: ({ start, end }: { start: Date; end: Date }, culture: string, localizer: DateLocalizer) =>
-    `${localizer.format(start, 'HH:mm', culture)} - ${localizer.format(end, 'HH:mm', culture)}`,
-  allDayEventFormat: ({ start, end }: { start: Date; end: Date }, culture: string, localizer: DateLocalizer) =>
-    `${localizer.format(start, 'HH:mm', culture)} - ${localizer.format(end, 'HH:mm', culture)}`,
+
+  eventTimeRangeFormat: (({ start, end }, culture, localizer) => {
+    return `${localizer!.format(start, "HH:mm", culture)} - ${localizer!.format(end, "HH:mm", culture)}`;
+  }) as DateRangeFormatFunction,
+
+  dayFormat: ((date, culture, localizer) => {
+    return localizer!.format(date, "MMM dd", culture);
+  }) as DateFormatFunction
 };
