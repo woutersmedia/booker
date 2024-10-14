@@ -1,4 +1,5 @@
 export type CalendarItem = {
+  id: number;
   title: string;
   desc?: string;
   start: Date;

@@ -2,7 +2,7 @@ import type { Config } from "jest";
 import nextJest from "next/jest";
 
 const createJestConfig = nextJest({
-  dir: "./",
+  dir: "./"
 });
 
 const config: Config = {
@@ -18,6 +18,7 @@ const config: Config = {
   },
   testEnvironment: "jsdom",
   moduleDirectories: ["node_modules", "src"],
+  setupFilesAfterEnv: ["<rootDir>/jest/setupTests.ts"],
   transformIgnorePatterns: [
     "/node_modules/",
     "\\.pnp\\.[^\\/]+$"

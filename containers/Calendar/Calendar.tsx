@@ -1,6 +1,6 @@
 import { Calendar } from "@/components/Calendar";
-import "./styles.css";
 import demoEvents from "./demoEvents";
+import './styles.css';
 
 export const CalendarContainer = () => {
   return (

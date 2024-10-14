@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
 import { useState } from "react";
-import { Calendar as BigCalendar, dateFnsLocalizer, NavigateAction, View } from "react-big-calendar";
-import { format, parse, startOfWeek, getDay } from "date-fns";
-import { nl } from "date-fns/locale/nl";
+import { Calendar as BigCalendar, NavigateAction, View } from "react-big-calendar";
 import { useSession } from "next-auth/react";
+import { formats, localizer, messages } from './config';
+import "react-big-calendar/lib/css/react-big-calendar.css";
 
 import { CalendarHeader, CalendarTimeSlot, CalendarItem } from "@/components/Calendar";
-import { CalenderItemEvents, CalendarItem as CalendarItemType } from "@/types/Calendar";
+import { CalenderItemEvents } from "@/types/Calendar";
 
 export const Calendar = ({ events }: { events: CalenderItemEvents }) => {
   const { data: session } = useSession();
@@ -17,18 +17,6 @@ export const Calendar = ({ events }: { events: CalenderItemEvents }) => {
   if (!session) {
     return null;
   }
-
-  const locales = {
-    "nl-NL": nl
-  };
-
-  const localizer = dateFnsLocalizer({
-    format,
-    parse,
-    startOfWeek: (date: any) => startOfWeek(date, { weekStartsOn: 1 }),
-    getDay,
-    locales
-  });
 
   const handleNavigate = (newDate: Date, view: View, action: NavigateAction) => {
     setCurrentDate(newDate);
@@ -42,6 +30,7 @@ export const Calendar = ({ events }: { events: CalenderItemEvents }) => {
     <BigCalendar
       localizer={localizer}
       events={events}
+      formats={formats}
       date={currentDate}
       onNavigate={handleNavigate}
       onView={handleViewChange}
@@ -57,6 +46,8 @@ export const Calendar = ({ events }: { events: CalenderItemEvents }) => {
       culture="nl-NL"
       view={view}
       popup={true}
+      messages={messages}
+      className="min-h-[700px]"
     />
   );
 };

@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import { NotificationsContainer } from "@/containers/Notifications/NotificationsContainer";
 import { NotificationType } from "@/types/Notications";
 

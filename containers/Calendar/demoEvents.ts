@@ -129,7 +129,7 @@ export default [
   },
   {
     id: 14,
-    title: "Today",
+    title: "Vandaag demo event",
     start: new Date(new Date().setHours(new Date().getHours() - 3)),
     end: new Date(new Date().setHours(new Date().getHours() + 3))
   },
@@ -214,7 +214,7 @@ export default [
   {
     id: 28,
     title: "Dit is een test Event",
-    start: new Date(now),
-    end: new Date(2024, 10, 15, 0, 0, 0)
+    start: new Date(2024, 9, 4, 0, 0, 0),
+    end: new Date(2024, 10, 26, 0, 0, 0)
   }
 ];
