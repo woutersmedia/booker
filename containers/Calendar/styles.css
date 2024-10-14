@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rbc-event {
+    @apply bg-primary border-blue-900;
+}
