@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { AddNotification } from "@/components/Notification/AddNotification";

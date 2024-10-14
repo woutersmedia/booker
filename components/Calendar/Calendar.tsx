@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Calendar as BigCalendar, NavigateAction, View } from "react-big-calendar";
+import { Calendar as BigCalendar, View } from "react-big-calendar";
 import { useSession } from "next-auth/react";
 import { formats, localizer, messages } from './config';
 import "react-big-calendar/lib/css/react-big-calendar.css";
@@ -18,7 +18,7 @@ export const Calendar = ({ events }: { events: CalenderItemEvents }) => {
     return null;
   }
 
-  const handleNavigate = (newDate: Date, view: View, action: NavigateAction) => {
+  const handleNavigate = (newDate: Date) => {
     setCurrentDate(newDate);
   };
 
