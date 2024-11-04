@@ -29,7 +29,7 @@
     "@babel/preset-typescript": "^7.24.7",
     "@playwright/test": "^1.48.1",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@types/babel__preset-env": "^7",
     "@types/jest": "^29.5.13",
