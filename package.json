@@ -18,7 +18,7 @@
     "date-fns": "^4.1.0",
     "next": "14.2.15",
     "next-auth": "^4.24.7",
-    "react": "^18",
+    "react": "^19",
     "react-big-calendar": "^1.15.0",
     "react-dom": "^18",
     "react-icons": "^5.3.0"
@@ -34,7 +34,7 @@
     "@types/babel__preset-env": "^7",
     "@types/jest": "^29.5.13",
     "@types/node": "^22",
-    "@types/react": "^18",
+    "@types/react": "^19",
     "@types/react-big-calendar": "^1",
     "@types/react-dom": "^18",
     "eslint": "^8",
