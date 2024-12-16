@@ -3411,7 +3411,7 @@ __metadata:
     postcss: "npm:^8"
     prettier: "npm:^3.3.3"
     react: "npm:^18"
-    react-big-calendar: "npm:^1.15.0"
+    react-big-calendar: "npm:^1.17.0"
     react-dom: "npm:^18"
     react-icons: "npm:^5.3.0"
     tailwindcss: "npm:^3.4.13"
@@ -7645,9 +7645,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-big-calendar@npm:^1.15.0":
-  version: 1.15.0
-  resolution: "react-big-calendar@npm:1.15.0"
+"react-big-calendar@npm:^1.17.0":
+  version: 1.17.0
+  resolution: "react-big-calendar@npm:1.17.0"
   dependencies:
     "@babel/runtime": "npm:^7.20.7"
     clsx: "npm:^1.2.1"
@@ -7668,7 +7668,7 @@ __metadata:
   peerDependencies:
     react: ^16.14.0 || ^17 || ^18
     react-dom: ^16.14.0 || ^17 || ^18
-  checksum: 10c0/7aa904e179be638feb0f5d61a20e710b5fee04091df7441362734558bc1fe8c4b5ece7a58e6c8335c073c844a3fdd3e3db83a95368e47b4320e9ea3ce063661f
+  checksum: 10c0/420213c72f3da3b73e72a918dabc0ff3f25c752e9d8ac4615f37edd52b6cb3055963f85da7b3dc625d126f3424f2cef160752a73f95e8f2d850855ec57c4a474
   languageName: node
   linkType: hard
 
@@ -8804,11 +8804,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>":
   version: 5.6.3
-  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=5adc0c"
+  resolution: "typescript@patch:typescript@npm%3A5.6.3#optional!builtin<compat/typescript>::version=5.6.3&hash=8c6c40"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/ac8307bb06bbfd08ae7137da740769b7d8c3ee5943188743bb622c621f8ad61d244767480f90fbd840277fbf152d8932aa20c33f867dea1bb5e79b187ca1a92f
+  checksum: 10c0/7c9d2e07c81226d60435939618c91ec2ff0b75fbfa106eec3430f0fcf93a584bc6c73176676f532d78c3594fe28a54b36eb40b3d75593071a7ec91301533ace7
   languageName: node
   linkType: hard
 
