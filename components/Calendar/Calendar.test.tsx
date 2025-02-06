@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { SessionProvider } from 'next-auth/react';
 import { Calendar } from '@/components/Calendar/Calendar';
-import { ReactNode, AwaitedReactNode, JSX } from 'react';
+import { ReactNode, JSX } from 'react';
 
 describe("Calendar", () => {
   const mockEvents = [
@@ -9,7 +9,7 @@ describe("Calendar", () => {
     { id: 2, title: "Event 2", start: new Date(), end: new Date(new Date().setHours(new Date().getHours() + 2)) }
   ];
 
-  const renderWithSession = (ui: string | number | bigint | boolean | Iterable<ReactNode> | Promise<AwaitedReactNode> | JSX.Element | null | undefined) => {
+  const renderWithSession = (ui: string | number | bigint | boolean | Iterable<ReactNode> | JSX.Element | null | undefined) => {
     return render(
       // @ts-ignore
       <SessionProvider session={{ user: { name: 'Test User' } }}>
