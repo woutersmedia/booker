@@ -30,4 +30,4 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Run Jest tests
-        run: npm run jest --coverage
+        run: npm run test --coverage

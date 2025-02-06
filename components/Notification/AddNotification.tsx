@@ -16,13 +16,13 @@ export const AddNotification = () => {
     return (
       <div className="container py-4">
         <div className="flex gap-2">
-          <button onClick={() => handleClick("success")} className="p-2 bg-green-500 text-white rounded">
+          <button onClick={() => handleClick("success")} className="p-2 bg-green-500 text-white rounded-xs">
             Show Success Notification
           </button>
-          <button onClick={() => handleClick("info")} className="p-2 bg-blue-500 text-white rounded">
+          <button onClick={() => handleClick("info")} className="p-2 bg-blue-500 text-white rounded-xs">
             Show Info Notification
           </button>
-          <button onClick={() => handleClick("error")} className="p-2 bg-red-500 text-white rounded">
+          <button onClick={() => handleClick("error")} className="p-2 bg-red-500 text-white rounded-xs">
             Show Error Notification
           </button>
         </div>
