@@ -26,13 +26,13 @@ describe("Calendar", () => {
 
   it('renders the calendar header correctly', () => {
     renderWithSession(<Calendar events={mockEvents} />);
-    expect(screen.getByText('maandag')).toBeInTheDocument();
-    expect(screen.getByText('dinsdag')).toBeInTheDocument();
-    expect(screen.getByText('woensdag')).toBeInTheDocument();
-    expect(screen.getByText('donderdag')).toBeInTheDocument();
-    expect(screen.getByText('vrijdag')).toBeInTheDocument();
-    expect(screen.getByText('zaterdag')).toBeInTheDocument();
-    expect(screen.getByText('zondag')).toBeInTheDocument();
+    expect(screen.getByText('maa')).toBeInTheDocument();
+    expect(screen.getByText('din')).toBeInTheDocument();
+    expect(screen.getByText('woe')).toBeInTheDocument();
+    expect(screen.getByText('don')).toBeInTheDocument();
+    expect(screen.getByText('vri')).toBeInTheDocument();
+    expect(screen.getByText('zat')).toBeInTheDocument();
+    expect(screen.getByText('zon')).toBeInTheDocument();
   });
 
   it('navigates to the previous month when previous button is clicked', () => {
