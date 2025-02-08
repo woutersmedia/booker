@@ -10,7 +10,7 @@ export const Button = ({
   href,
 }: ButtonProps) => {
   const getColorClasses = (color: ButtonProps["color"]) => {
-    let extraClasses = disabled ? "opacity-40" : "cursor-pointer";
+    const extraClasses = disabled ? "opacity-40" : "cursor-pointer";
 
     switch (color) {
       case "red":

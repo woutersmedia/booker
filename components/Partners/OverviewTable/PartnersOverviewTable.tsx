@@ -1,8 +1,5 @@
-"use client";
-
 import { PartnersTableHeader } from "./PartnersTableHeader";
 import { PartnersTableRow } from "./PartnersTableRow";
-import { useDictionary } from "@/providers/Dictionary";
 import { PartnerType } from "@/types/Partner";
 
 type PartnersOverviewTableProps = {
@@ -12,7 +9,6 @@ type PartnersOverviewTableProps = {
 export const PartnersOverviewTable = ({
   partnersData,
 }: PartnersOverviewTableProps) => {
-  const dict = useDictionary();
 
   return (
     <div className="container">
