@@ -5,4 +5,5 @@ export type PartnerType = {
   lastName: string;
   artistName: string;
   type: string[];
+  uuid: string;
 };

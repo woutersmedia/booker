@@ -1,12 +1,16 @@
 import { PartnersOverviewTable } from "@/components/Partners/OverviewTable";
-import partnersData from "./demoPartners.json";
 import { PartnersOverviewToolbar } from "@/components/Partners/OverviewToolbar";
+import { getPartners } from "@/hooks/getPartners";
 
-export const PartnersOverview = () => {
+export const PartnersOverview = async () => {
+  const partners = await getPartners();
+
   return (
     <>
       <PartnersOverviewToolbar />
-      <PartnersOverviewTable partnersData={partnersData} />
+      {partners && (
+        <PartnersOverviewTable partnersData={partners} />
+      )}
     </>
   );
 };

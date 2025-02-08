@@ -1,20 +1,19 @@
-"use client";
+// import { useState } from "react";
+// import { useDictionary } from "@/providers/Dictionary";
+// import { PartnerType } from "@/types/Partner";
+// import { Button } from "@/components/Button";
 
-import { useState } from "react";
-import { useDictionary } from "@/providers/Dictionary";
-import { PartnerType } from "@/types/Partner";
-import { Button } from "@/components/Button";
-import partnersData from "./demoPartners.json";
+import { getPartnerByUuid } from "@/hooks/getPartners";
 
 type EditPartnerContainerProps = {
-  id: string;
+  uuid: string;
 };
 
-export const EditPartnerContainer = ({ id }: EditPartnerContainerProps) => {
-  const partner = partnersData[0];
-  console.log(id);
+export const EditPartnerContainer = async ({ uuid }: EditPartnerContainerProps) => {
+  const partner = await getPartnerByUuid(uuid);
+  console.log(uuid);
 
-  if (!id) {
+  if (!uuid) {
     return <div>Partner not found</div>;
   }
 

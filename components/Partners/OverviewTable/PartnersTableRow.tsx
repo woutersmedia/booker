@@ -37,7 +37,7 @@ export const PartnersTableRow = ({ partner }: PartnersTableRowProps) => {
         <Button
           text={dict.general.edit}
           small
-          href={`/partners/edit/${partner.id}`}
+          href={`/partners/edit/${partner.uuid}`}
         />
       </td>
     </tr>
