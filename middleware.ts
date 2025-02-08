@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export { default } from "next-auth/middleware";
 
 const locales = ["en", "nl"];
+const blockedRoutes = ["/dashboard", "/partners"];
 
 function getLocale(request: NextRequest) {
   const cookieLocale = request.cookies.get("locale")?.value;
@@ -21,27 +22,23 @@ function getLocale(request: NextRequest) {
     }
   }
 
-  // Default to 'en' if no locale is found
   return "en";
 }
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) return;
-
-  const locale = getLocale(request);
-
-  request.nextUrl.pathname = `/${locale}${pathname}`;
-
-  return NextResponse.redirect(request.nextUrl);
+  if (!pathnameHasLocale) {
+    const locale = getLocale(request);
+    request.nextUrl.pathname = `/${locale}${pathname}`;
+    return NextResponse.redirect(request.nextUrl);
+  }
 }
 
-// Applies next-auth only to matching routers - can be regex
-// Ref: https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
 export const config = {
-  matcher: ["/((?!_next|api).*)", "/extra", "/dashboard"],
+  matcher: ["/((?!_next|api).*)"],
 };

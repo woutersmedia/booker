@@ -1,5 +1,36 @@
 {
+  "general": {
+    "edit": "Bewerken",
+    "name": "Naam",
+    "save": "Opslaan",
+    "type": "Type",
+    "please_log_in": "Log alstublieft in",
+    "access_denied": "Toegang geweigerd",
+    "no_access": "U heeft geen toegang tot deze pagina.",
+    "go_back_to": "Ga terug naar"
+  },
   "homepage": {
     "title": "Startpagina titel"
+  },
+  "header": {
+    "sign_in": "Inloggen",
+    "sign_out": "Uitloggen"
+  },
+  "navigation": {
+    "partners": "Partners",
+    "locations": "Locaties"
+  },
+  "notifications": {
+    "show_succes_notification": "Toon Succes Notificatie",
+    "show_error_notification": "Toon Fout Notificatie",
+    "show_warning_notification": "Toon Waarschuwing Notificatie",
+    "show_info_notification": "Toon Info Notificatie"
+  },
+  "partners": {
+    "add_partner": "Partner Toevoegen",
+    "edit_partner": "Partner Bewerken",
+    "artist_name": "Artiest Naam",
+    "partners": "Partners",
+    "place_on_non_active": "Plaats op niet-actief"
   }
 }

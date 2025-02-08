@@ -1,5 +1,36 @@
 {
+  "general": {
+    "edit": "Edit",
+    "name": "Name",
+    "save": "Save",
+    "type": "Type",
+    "please_log_in": "Please Log In",
+    "access_denied": "Access Denied",
+    "no_access": "You don't have access to this page.",
+    "go_back_to": "Go Back to"
+  },
   "homepage": {
     "title": "Homepage Title"
+  },
+  "header": {
+    "sign_in": "Sign In",
+    "sign_out": "Sign Out"
+  },
+  "navigation": {
+    "partners": "Partners",
+    "locations": "Locations"
+  },
+  "notifications": {
+    "show_succes_notification": "Show Success Notification",
+    "show_error_notification": "Show Error Notification",
+    "show_warning_notification": "Show Warning Notification",
+    "show_info_notification": "Show Info Notification"
+  },
+  "partners": {
+    "add_partner": "Add Partner",
+    "edit_partner": "Edit Partner",
+    "artist_name": "Artist Name",
+    "partners": "Partners",
+    "place_on_non_active": "Place on non-active"
   }
 }

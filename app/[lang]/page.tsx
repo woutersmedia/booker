@@ -1,31 +1,24 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { AddNotification } from "@/components/Notification/AddNotification";
-import { CalendarContainer } from "@/containers/Calendar";
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { LangParams } from "@/types/Locale";
+import { Metadata } from "next";
 
 type HomeParams = {
-  params: Promise<{ lang: 'en' | 'nl' }>;
+  params: Promise<LangParams>;
+};
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Booker is the all-in-one booking platform",
 };
 
 const Home = async ({ params }: HomeParams) => {
   const lang = (await params).lang;
-  const dict = await getDictionary(lang)
-
-  console.log(lang)
+  const dict = await getDictionary(lang);
 
   return (
-    <>
-      <Header />
-      <AddNotification />
-
-      {dict.homepage?.title}
-      <section className="my-8">
-        <CalendarContainer />
-      </section>
-
-      <Footer />
-    </>
+    <section className="min-h-96 flex justify-center items-center">
+      <h2 className="text-4xl font-bold">{dict.general.please_log_in}</h2>
+    </section>
   );
 };
 
