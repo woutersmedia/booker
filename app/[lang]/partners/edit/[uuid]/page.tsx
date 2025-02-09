@@ -8,8 +8,6 @@ type EditPartnerPageProps = {
 const EditPartnerPage = async ({ params }: EditPartnerPageProps) => {
   const { lang, uuid } = await params;
 
-  console.log(lang);
-
   return <EditPartnerContainer uuid={uuid} />;
 };
 

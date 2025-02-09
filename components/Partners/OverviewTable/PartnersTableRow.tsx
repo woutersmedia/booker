@@ -3,6 +3,7 @@
 import { Button } from "@/components/Button";
 import { useDictionary } from "@/providers/Dictionary";
 import { PartnerType } from "@/types/Partner";
+import { useNotification } from "@/hooks/useNotification";
 
 type PartnersTableRowProps = {
   partner: PartnerType;
@@ -10,6 +11,11 @@ type PartnersTableRowProps = {
 
 export const PartnersTableRow = ({ partner }: PartnersTableRowProps) => {
   const dict = useDictionary();
+  const { addNotification } = useNotification();
+
+  const sendNotification = () => {
+    addNotification("info", "Redirecting you to the edit page", "Please wait");
+  };
 
   return (
     <tr className="hover:bg-slate-50">
@@ -38,6 +44,7 @@ export const PartnersTableRow = ({ partner }: PartnersTableRowProps) => {
           text={dict.general.edit}
           small
           href={`/partners/edit/${partner.uuid}`}
+          onClick={() => sendNotification()}
         />
       </td>
     </tr>

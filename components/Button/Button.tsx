@@ -8,6 +8,7 @@ export const Button = ({
   onClick,
   disabled,
   href,
+  type,
 }: ButtonProps) => {
   const getColorClasses = (color: ButtonProps["color"]) => {
     const extraClasses = disabled ? "opacity-40" : "cursor-pointer";
@@ -42,7 +43,7 @@ export const Button = ({
   }
 
   return (
-    <button className={buttonClasses} onClick={onClick} disabled={disabled}>
+    <button className={buttonClasses} onClick={onClick} disabled={disabled} type={type}>
       {text}
     </button>
   );
