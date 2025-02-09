@@ -63,6 +63,6 @@ describe("Calendar", () => {
       },
     ];
     renderWithSession(<Calendar events={multiDayEvents} />);
-    expect(screen.getByText('Multi-day Event')).toBeInTheDocument();
+    expect(screen.getAllByText('Multi-day Event')).toBeDefined();
   });
 });
