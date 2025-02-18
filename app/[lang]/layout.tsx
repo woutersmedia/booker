@@ -10,8 +10,6 @@ import { VercelToolbar } from "@vercel/toolbar/next";
 import { LangParams } from "@/types/Locale";
 import DictionaryProvider from "@/providers/Dictionary";
 import { getDictionary } from "./dictionaries";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
 import { RootTemplate } from "@/templates/root";
 
 const geistSans = localFont({
