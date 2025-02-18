@@ -17,7 +17,7 @@ const Home = async ({ params }: HomeParams) => {
   const dict = await getDictionary(lang);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-gray-100 to-gray-300 text-primary">
+    <section className="min-h-screen flex flex-col items-center justify-center text-primary">
       <div className="text-center">
         <h1 className="text-6xl font-bold mb-4">Booker</h1>
         <p className="text-2xl mb-8">{dict.homepage.title}</p>
@@ -29,19 +29,19 @@ const Home = async ({ params }: HomeParams) => {
       </div>
       <div className="container">
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-zinc-800 dark:text-zinc-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-2">
               {dict.homepage.for_artists}
             </h2>
             <p className="text-lg">{dict.homepage.for_artists_description}</p>
           </div>
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-zinc-800 dark:text-zinc-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-2">
               {dict.homepage.for_bookers}
             </h2>
             <p className="text-lg">{dict.homepage.for_bookers_description}</p>
           </div>
-          <div className="bg-white text-black p-6 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-zinc-800 dark:text-zinc-100 p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-2">
               {dict.homepage.for_venues}
             </h2>

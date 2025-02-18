@@ -12,15 +12,16 @@ export const Button = ({
 }: ButtonProps) => {
   const getColorClasses = (color: ButtonProps["color"]) => {
     const extraClasses = disabled ? "opacity-40" : "cursor-pointer";
+    const initialClasses = "border-transparent border dark:bg-transparent";
 
     switch (color) {
       case "red":
-        return `bg-red-500 hover:bg-red/50 ${extraClasses}`;
+        return `bg-red-500 dark:border-red-500 hover:bg-red-500/50 ${extraClasses} ${initialClasses}`;
       case "amber":
-        return `bg-amber-500 hover:bg-amber/50 ${extraClasses}`;
+        return `bg-amber-500 dark:border-amber-500 hover:bg-amber-500/50 ${extraClasses} ${initialClasses}`;
       case "primary":
       default:
-        return `bg-primary hover:bg-primary/50 ${extraClasses}`;
+        return `bg-primary dark:border-blue-900 hover:bg-primary/50 ${extraClasses} ${initialClasses}`;
     }
   };
 

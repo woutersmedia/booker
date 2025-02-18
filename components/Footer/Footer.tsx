@@ -15,7 +15,7 @@ export const Footer = () => {
   };
 
   const footerClass =
-    "flex flex-col w-full h-fit bg-primary text-white md:py-14 py-8 px-4 xl:px-0";
+    "md:col-start-4 md:col-end-13 flex flex-col w-full h-fit text-white p-4 gap-4";
   const gridContainerClass = "grid md:grid-cols-3 grid-cols-1 md:gap-24 gap-12";
 
   return (
@@ -37,11 +37,9 @@ export const Footer = () => {
             ])}
           </div>
         </div>
-      </footer>
-      <hr className="w-full bg-primary border-t border-gray-500" />
-      <footer className="bg-primary text-white md:py-8 py-4 px-4 xl:px-0">
+        <hr className="w-full border-t border-gray-500" />
         <div className="container">
-          <div className="md:text-center text-left">
+          <div className="">
             © 2024 - {parentYear} Wouters Media - All rights reserved.
             Booker&#8482;
           </div>

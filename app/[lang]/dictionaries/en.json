@@ -34,7 +34,8 @@
   },
   "navigation": {
     "partners": "Partners",
-    "locations": "Locations"
+    "locations": "Locations",
+    "events": "Events"
   },
   "notifications": {
     "show_succes_notification": "Show Success Notification",
