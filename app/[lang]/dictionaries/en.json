@@ -1,0 +1,53 @@
+{
+  "general": {
+    "edit": "Edit",
+    "name": "Name",
+    "save": "Save",
+    "type": "Type",
+    "fill_in_type": "Fill in specific types",
+    "please_log_in": "Please Log In",
+    "access_denied": "Access Denied",
+    "no_access": "You don't have access to this page.",
+    "go_back_to": "Go Back to",
+    "currently_in_beta": "Currently in beta",
+    "first_name": "First Name",
+    "fill_in_first_name": "Fill in your first name",
+    "prefix": "Prefix",
+    "last_name": "Last Name",
+    "fill_in_last_name": "Fill in your last name",
+    "cancel": "Cancel"
+  },
+  "homepage": {
+    "title": "Your all-in-one booking platform",
+    "request_demo": "Request a Demo",
+    "demo_request_subject": "Demo Request for Booker",
+    "for_artists": "For Artists",
+    "for_artists_description": "For all artists who want a comprehensive view of their bookings and calendars, seamlessly synced with their favorite calendar app.",
+    "for_bookers": "For Bookers",
+    "for_bookers_description": "Streamline your artist management: organize requests, plan schedules, handle communications, and connect with your preferred tools.",
+    "for_venues": "For Venues",
+    "for_venues_description": "Book artists for your venue and connect securely with their bookers using Auth0-powered authentication."
+  },
+  "header": {
+    "sign_in": "Sign In",
+    "sign_out": "Sign Out"
+  },
+  "navigation": {
+    "partners": "Partners",
+    "locations": "Locations"
+  },
+  "notifications": {
+    "show_succes_notification": "Show Success Notification",
+    "show_error_notification": "Show Error Notification",
+    "show_warning_notification": "Show Warning Notification",
+    "show_info_notification": "Show Info Notification"
+  },
+  "partners": {
+    "add_partner": "Add Partner",
+    "edit_partner": "Edit Partner",
+    "artist_name": "Artist Name",
+    "fill_in_artist_name": "Fill in artist name",
+    "partners": "Partners",
+    "place_on_non_active": "Place on non-active"
+  }
+}

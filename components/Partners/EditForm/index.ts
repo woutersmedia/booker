@@ -1,0 +1,1 @@
+export { PartnerEditForm } from "./EditForm";

@@ -1,0 +1,1 @@
+export { PartnersOverviewTable } from "./PartnersOverviewTable";
