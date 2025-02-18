@@ -4,11 +4,18 @@
     "name": "Naam",
     "save": "Opslaan",
     "type": "Type",
+    "fill_in_type": "Vul de specifieke types in",
     "please_log_in": "Log alstublieft in",
     "access_denied": "Toegang geweigerd",
     "no_access": "U heeft geen toegang tot deze pagina.",
     "go_back_to": "Ga terug naar",
-    "currently_in_beta": "Momenteel in bèta"
+    "currently_in_beta": "Momenteel in bèta",
+    "first_name": "Voornaam",
+    "fill_in_first_name": "Vul uw voornaam in",
+    "prefix": "Tussenvoegsel",
+    "last_name": "Achternaam",
+    "fill_in_last_name": "Vul uw achternaam in",
+    "cancel": "Annuleren"
   },
   "homepage": {
     "title": "Uw alles-in-één boekingsplatform",
@@ -36,9 +43,10 @@
     "show_info_notification": "Toon Info Notificatie"
   },
   "partners": {
-    "add_partner": "Partner Toevoegen",
-    "edit_partner": "Partner Bewerken",
+    "add_partner": "Partner toevoegen",
+    "edit_partner": "Partner bewerken",
     "artist_name": "Artiest Naam",
+    "fill_in_artist_name": "Vul artiest naam in",
     "partners": "Partners",
     "place_on_non_active": "Plaats op niet-actief"
   }

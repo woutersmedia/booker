@@ -1,4 +1,3 @@
-import { AddNotification } from "@/components/Notification/AddNotification";
 import { CalendarContainer } from "@/containers/Calendar";
 import { getSession } from "@/auth/options";
 import { redirect } from "next/navigation";
@@ -12,7 +11,6 @@ const DashboardPage = async () => {
 
   return (
     <>
-      <AddNotification />
       <section className="my-8">
         <CalendarContainer />
       </section>

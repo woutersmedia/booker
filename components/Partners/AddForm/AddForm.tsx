@@ -7,21 +7,14 @@ import { useNotification } from "@/hooks/useNotification";
 import { FormInput } from "@/components/Forms";
 import { useDictionary } from "@/providers/Dictionary";
 import { useRouter } from "next/navigation";
-import { updatePartner } from "@/hooks/getPartners";
-import { Bounce, toast } from "react-toastify";
+import { createPartner } from "@/hooks/getPartners";
 
-type PartnerEditFormProps = {
-  partner: PartnerType;
-};
-
-export const PartnerEditForm = ({ partner }: PartnerEditFormProps) => {
+export const AddPartnerForm = () => {
   const router = useRouter();
   const { addNotification } = useNotification();
   const dict = useDictionary();
 
-  const { control, handleSubmit } = useForm<PartnerType>({
-    defaultValues: partner,
-  });
+  const { control, handleSubmit } = useForm<PartnerType>();
 
   const onCancel = () => {
     addNotification("info", "Redirecting you back", "Please wait");
@@ -29,33 +22,22 @@ export const PartnerEditForm = ({ partner }: PartnerEditFormProps) => {
   };
 
   const onSubmit = async (data: PartnerType) => {
-    addNotification("info", "Updating partner", "The partner is being updated");
+    addNotification("info", "Creating partner", "The partner is being created");
 
     console.log(data);
 
     try {
-      await updatePartner(partner.uuid, data);
+      await createPartner(data);
     } catch (err) {
-      console.error("Error updating partner:", err);
+      console.error("Error creating Partner:", err);
     }
 
-    toast('Updated partner', {
-      position: "top-right",
-      autoClose: false,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Bounce,
-    });
-
+    addNotification(
+      "success",
+      "Partner created",
+      "The partner has been created successfully",
+    );
   };
-
-  if (!partner) {
-    return null;
-  }
 
   return (
     <>
@@ -64,7 +46,7 @@ export const PartnerEditForm = ({ partner }: PartnerEditFormProps) => {
           onSubmit={handleSubmit(onSubmit)}
           className="rounded bg-white p-4 text-black"
         >
-          <h2 className="text-2xl mb-4">{dict.partners.edit_partner}</h2>
+          <h2 className="text-2xl mb-4">{dict.partners.add_partner}</h2>
           <div className="mb-4">
             <FormInput
               id="firstName"
