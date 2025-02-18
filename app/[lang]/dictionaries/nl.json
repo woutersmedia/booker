@@ -34,7 +34,8 @@
   },
   "navigation": {
     "partners": "Partners",
-    "locations": "Locaties"
+    "locations": "Locaties",
+    "events": "Evenementen"
   },
   "notifications": {
     "show_succes_notification": "Toon Succes Notificatie",

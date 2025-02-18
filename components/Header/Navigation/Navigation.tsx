@@ -9,8 +9,8 @@ export const Navigation = () => {
   const { data: session } = useSession();
 
   return (
-    <nav role="navigation">
-      <ul className="flex gap-4">
+    <nav role="navigation" className="p-4">
+      <ul className="flex flex-col gap-4">
         {!session ? (
           <>
             <NavigationItem label="Product" href="/" />
@@ -22,7 +22,7 @@ export const Navigation = () => {
           <>
             <NavigationItem label={dict.navigation.partners} href="/partners" />
             <NavigationItem label={dict.navigation.locations} href="/" />
-            <NavigationItem label="Authors" href="/" />
+            <NavigationItem label={dict.navigation.events} href="/events" />
             <NavigationItem label="Genres" href="/" />
           </>
         )}

@@ -1,15 +1,15 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: #1e3a8a;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-primary: var(--color-blue-900);
 
-  --grid-template-rows-24: repeat(24, minmax(0, 1fr));
+    --grid-template-rows-24: repeat(24, minmax(0, 1fr));
 }
 
 @utility container {
-  margin-inline: auto;
+    margin-inline: auto;
 }
 
 /*
@@ -21,28 +21,28 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
 }
 
 @utility text-balance {
-  text-wrap: balance;
+    text-wrap: balance;
 }
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: var(--color-zinc-50);
+    --foreground: var(--color-zinc-950);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: var(--color-stone-600);
-        --foreground: #ededed;
+        --background: var(--color-zinc-950);
+        --foreground: var(--color-zinc-50);
     }
 }
 

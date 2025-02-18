@@ -10,8 +10,7 @@ import { VercelToolbar } from "@vercel/toolbar/next";
 import { LangParams } from "@/types/Locale";
 import DictionaryProvider from "@/providers/Dictionary";
 import { getDictionary } from "./dictionaries";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { RootTemplate } from "@/templates/root";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -54,12 +53,10 @@ const RootLayout = async ({
         <Analytics />
         <html lang={lang}>
           <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            className={`${geistSans.variable} ${geistMono.variable} antialiased dark:text-white grid grid-cols-3 md:grid-cols-12 min-h-screen relative`}
           >
             <ToastProvider>
-              <Header />
-              <main role="main">{children}</main>
-              <Footer />
+              <RootTemplate>{children}</RootTemplate>
               {notProduction && <VercelToolbar />}
             </ToastProvider>
           </body>

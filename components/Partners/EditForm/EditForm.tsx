@@ -39,7 +39,7 @@ export const PartnerEditForm = ({ partner }: PartnerEditFormProps) => {
       console.error("Error updating partner:", err);
     }
 
-    toast('Updated partner', {
+    toast("Updated partner", {
       position: "top-right",
       autoClose: false,
       hideProgressBar: false,
@@ -50,7 +50,6 @@ export const PartnerEditForm = ({ partner }: PartnerEditFormProps) => {
       theme: "light",
       transition: Bounce,
     });
-
   };
 
   if (!partner) {
@@ -59,11 +58,8 @@ export const PartnerEditForm = ({ partner }: PartnerEditFormProps) => {
 
   return (
     <>
-      <div className="container my-4 shadow-lg rounded-lg">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="rounded bg-white p-4 text-black"
-        >
+      <div className="container">
+        <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text-2xl mb-4">{dict.partners.edit_partner}</h2>
           <div className="mb-4">
             <FormInput
