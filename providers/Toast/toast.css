@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+.Toastify__toast {
+    background-color: var(--color-neutral-100);
+    padding: theme(spacing.4);
+    box-shadow: theme(boxShadow.lg);
+    ring: 1px solid var(--color-gray-200);
+}
+
+.Toastify__toast-body {
+    display: flex;
+    align-items: start;
+    color: var(--color-neutral-900);
+}
+
+.Toastify__progress-bar {
+    opacity: 1;
+}
+
+.Toastify__progress-bar--success {
+    background-color: var(--color-green-500);
+}
+
+.Toastify__progress-bar--error {
+    background-color: var(--color-red-500);
+}

@@ -9,7 +9,7 @@ export const PartnersOverviewToolbar = () => {
   return (
     <div className="container">
       <div className="flex justify-end">
-        <Button text={dict.partners.add_partner} />
+        <Button text={dict.partners.add_partner} href="/partners/add" />
       </div>
     </div>
   );

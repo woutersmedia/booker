@@ -1,0 +1,19 @@
+name: 'CodeQL Analysis'
+
+on:
+  push:
+    branches: [ main, push ]
+  pull_request:
+    branches: [ main, push ]
+
+jobs:
+  codeql:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: 'javascript', 'typescript'
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2

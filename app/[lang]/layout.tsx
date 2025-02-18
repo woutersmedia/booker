@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "../globals.css";
 import { AuthProvider } from "@/providers/Auth";
-import { NotificationsProvider } from "@/providers/Notifications";
+import { ToastProvider } from "@/providers/Toast";
 import { getSession } from "@/auth/options";
 import { Analytics } from "@vercel/analytics/react";
 import { VercelToolbar } from "@vercel/toolbar/next";
@@ -30,8 +30,8 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Booker',
-    default: 'Booker',
+    template: "%s | Booker",
+    default: "Booker",
   },
   description: "Booker, the all-in-one booking platform",
 };
@@ -56,14 +56,12 @@ const RootLayout = async ({
           <body
             className={`${geistSans.variable} ${geistMono.variable} antialiased`}
           >
-            <NotificationsProvider>
+            <ToastProvider>
               <Header />
-              <main role="main">
-                {children}
-              </main>
+              <main role="main">{children}</main>
               <Footer />
-            </NotificationsProvider>
-            {notProduction && <VercelToolbar />}
+              {notProduction && <VercelToolbar />}
+            </ToastProvider>
           </body>
         </html>
       </DictionaryProvider>
