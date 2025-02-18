@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { updatePartner } from "@/lib/updatePartner";
 import { validate as isUuid } from "uuid";
 
-export async function PATCH(req: NextRequest, { params }: { params: { uuid: string } }) {
-  const { uuid } = await params;
+export async function PATCH(req: NextRequest) {
+  const uuid = req.nextUrl.pathname.split("/").pop(); // Extract `uuid` from the URL
 
-  if (!isUuid(uuid)) {
+  if (!uuid || !isUuid(uuid)) {
     return NextResponse.json({ error: `Invalid UUID: ${uuid}` }, { status: 400 });
   }
 
